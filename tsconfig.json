@@ -15,7 +15,13 @@
       "api/*": ["./api/server/*"]
     },
     "sourceMap": true,
-    "target": "es5"
+    "target": "es5",
+    "skipLibCheck": true,
+    "stripInternal": true,
+    "noImplicitAny": false,
+    "types": [
+      "@types/meteor"
+    ]
   },
   "include": [
     "src/**/*.ts",
@@ -24,6 +30,7 @@
   "exclude": [
     "node_modules",
     "api/node_modules",
+    "api",
     "src/**/*.spec.ts",
     "src/**/__tests__/*.ts"
   ],
