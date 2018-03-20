@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
     "declaration": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -8,16 +9,21 @@
       "dom",
       "es2015"
     ],
-    "module": "es2015",
+    "module": "commonjs",
     "moduleResolution": "node",
+    "paths": {
+      "api/*": ["./api/server/*"]
+    },
     "sourceMap": true,
     "target": "es5"
   },
   "include": [
-    "src/**/*.ts"
+    "src/**/*.ts",
+    "api/**/*.ts"
   ],
   "exclude": [
     "node_modules",
+    "api/node_modules",
     "src/**/*.spec.ts",
     "src/**/__tests__/*.ts"
   ],
